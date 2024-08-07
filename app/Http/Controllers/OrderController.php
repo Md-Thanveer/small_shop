@@ -27,8 +27,9 @@ class OrderController extends Controller
 
     public function show($id)
     {
-        $user = Auth::user();
-
-        $customer_id
+        $order = Order::where('id',$id)
+                ->orderBy('id', 'asc')
+                ->first();
+        return view('frontend/order_details',compact('order'));
     }
 }
