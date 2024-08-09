@@ -23,7 +23,7 @@ class Product extends Model
         'alert_stock',
         'image_path',
         'description'
-    ];
+    ];  
 
     public function category()
     {
@@ -32,7 +32,7 @@ class Product extends Model
 
     public function brand()
     {
-        return $this->belongsTo(Brand::class, 'brand_id ');
+        return $this->belongsTo(Brand::class, 'brand_id');
     }
 
     public function GetImagePath()
