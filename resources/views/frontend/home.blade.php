@@ -37,7 +37,7 @@ Home Page
     <div class="row">
         @foreach ($product as $item)
             <div class="col-md-4 mb-4">
-                <a href="/products/{{ $item->id }}">
+                <a href="/product/{{ $item->id }}">
                     <div class="card">
                         <img src="{{ $item->GetImagePath() }}" class="card-img-top" alt="{{ $item->name }}">
                         <div class="card-body">
