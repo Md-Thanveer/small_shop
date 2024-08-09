@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal('price',10,2)->nullable();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('brand_id');
-            $table->string('image_path')->nullable();
+            $table->string('image_path')->default('noimage.jpeg')->nullable();
             $table->integer('qty')->nullable();
             $table->integer('alert_stock')->default(0);
             $table->timestamps();
