@@ -20,15 +20,17 @@ class HomeController extends Controller
 
         $query = Product::query();
 
+        
+
         //Apply filters based on the request
-        if ($request->has('category') && $request->category != 'ALL') {
+        if ($request->has('category') && $request->category != 'All') {
             $query->where('category_id', $request->category);
             
         }
 
         if ($request->has('search')) {
             $searchTerm = $request->input('search');
-            $query->where('name','like', "%{searchTerm}%");
+            $query->where('name','like', "%{$searchTerm}%");
         }
 
         $data = [
@@ -36,6 +38,9 @@ class HomeController extends Controller
             'categories' => $categories
         ];
 
+
+
+        // dd($data);
         return view('frontend/home',$data);
     }
 
