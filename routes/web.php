@@ -34,3 +34,27 @@ Route::get('/forgot_password',[AuthController::class,'forgot_password'])->name('
 
 
 Route::get('/register',[AuthController::class,'register'])->name('home.register');
+
+use App\Http\Controllers\CartController;
+
+//cart listing Page
+Route::get('/cart', [CartController::class, 'add_to_cart'])->name('cart.index');
+
+//add to cart
+Route::get('/cart/add_to_cart', [CartController::class, 'add_to_cart'])->name('cart.add_to_cart');
+
+//Increase Quantity route
+Route::get('/cart/increase/{id}', [CartController::class, 'increaseQuantity'])->name('cart.increase');
+
+//Decrease Quantity route
+Route::get('/cart/decrease/{id}', [CartController::class, 'decreaseQuantity'])->name('cart.decrease');
+
+// remove item from cart
+Route::get('/cart/{id}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+
+//Checkbox route (if you have a checkout process)
+Route::get('/checkout', [CartController::class, 'index'])->name('checkbox');
+
+//clear cart Route
+Route::get('/cart/clear', [CartController::class, 'clearcart'])->name('cart.clear');
+
