@@ -38,7 +38,7 @@ Route::get('/register',[AuthController::class,'register'])->name('home.register'
 use App\Http\Controllers\CartController;
 
 //cart listing Page
-Route::get('/cart', [CartController::class, 'add_to_cart'])->name('cart.index');
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 //add to cart
 Route::get('/cart/add_to_cart', [CartController::class, 'add_to_cart'])->name('cart.add_to_cart');
