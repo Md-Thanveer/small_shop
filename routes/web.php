@@ -28,12 +28,16 @@ Route::get('/generate-qrcode/{productid}', [BarcodeController::class, 'generateA
 
 use App\Http\Controllers\AuthController;
 Route::get('/login',[AuthController::class,'login'])->name('home.login');
-
-
+Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 Route::get('/forgot_password',[AuthController::class,'forgot_password'])->name('home.forgot_password');
-
-
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/register',[AuthController::class,'register'])->name('home.register');
+Route::get('/profile',[AuthController::class, 'profile'])->name('home.profile');
+Route::post('/store', [AuthController::class, 'store'])->name('home.store');
+Route::get('/order', [AuthController::class, 'order'])->name('home.order');
+Route::get('/role', [AuthController::class, 'role'])->name('home.role');
+Route::get('/category', [AuthController::class, 'category'])->name('home.category');
+
 
 use App\Http\Controllers\CartController;
 
@@ -58,3 +62,14 @@ Route::get('/checkout', [CartController::class, 'index'])->name('checkbox');
 //clear cart Route
 Route::get('/cart/clear', [CartController::class, 'clearcart'])->name('cart.clear');
 
+
+use App\Http\Controllers\CityController;
+ 
+Route::get('/cities',[CityController::class,'index'])->name('ciities.index');
+
+Route::get('/city-info',[CityController::class,'cityInfoPage']);
+
+Route::get('/find-state-country/{city}',[CityController::class,'getCityIndo']);
+
+
+Route::get('/show-city-details/{city}', [CityController::class, 'showCityDetails']);

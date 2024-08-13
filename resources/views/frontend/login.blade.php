@@ -1,9 +1,21 @@
 @extends('frontend.layout.app')
 
 @section('title')
-login
+
+Login page
+
 @endsection
 
 @section('content')
-<h1>Login</h1>
+
+<div class="login-container">
+        <h1>Welcome To Login Page</h1>
+        <form action="/authenticate" method="POST">
+            @csrf
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="/register" class="signup-link">Don't have an account? Sign up</a>
+    </div>
 @endsection
