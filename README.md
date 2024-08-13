@@ -105,6 +105,16 @@ git remote add origin https://github.com/your-username/small_shop.git
 git push -u origin main
 ```
 
+# Configuration
+Customize your environment settings by editing the .env file. Typical configuration settings include:
+
+- Database: Configure your database connection in the DB_* variables.
+- Mail: Set up your mailing system in the MAIL_* variables.
+- Cache: Configure your caching mechanism in the CACHE_* variables.
+
+# Usage
+After installation, you can start using the application by visiting http://localhost:8000 in your browser. [Explain how to use the application, add examples or screenshots if needed.]
+
 
 
 
