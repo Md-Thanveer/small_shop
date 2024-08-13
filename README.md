@@ -116,6 +116,10 @@ Customize your environment settings by editing the .env file. Typical configurat
 After installation, you can start using the application by visiting http://localhost:8000 in your browser.
 
 
+![Alt Text](images/shop.jpeg)
+
+
+
 
 
 
