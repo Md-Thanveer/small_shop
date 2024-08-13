@@ -113,7 +113,7 @@ Customize your environment settings by editing the .env file. Typical configurat
 - Cache: Configure your caching mechanism in the CACHE_* variables.
 
 # Usage
-After installation, you can start using the application by visiting http://localhost:8000 in your browser. [Explain how to use the application, add examples or screenshots if needed.]
+After installation, you can start using the application by visiting http://localhost:8000 in your browser.
 
 
 
